@@ -12,13 +12,13 @@ from chef_assistant_agent import (
 )
 
 
-# chef_assistant_agent = ChefAssistantAgentTextBased()
-# chef_assistant_agent.send_message(
-#     HumanMessage(content="I have eggs, potatoes and an onion. I'm poor.")
-# )
-# chef_assistant_agent.send_message(
-#     HumanMessage(content="How should I cut the potatoes for the potato omelet?")
-# )
+chef_assistant_agent = ChefAssistantAgentTextBased()
+chef_assistant_agent.send_message(
+    HumanMessage(content="I have eggs, potatoes and an onion. I'm poor.")
+)
+chef_assistant_agent.send_message(
+    HumanMessage(content="How should I cut the potatoes for the potato omelet?")
+)
 
 print("\n\n=============\n\n")
 
