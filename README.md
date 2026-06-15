@@ -1,2 +1,2 @@
-# langchain-course-projects
+# Description
 Project scripts for the LangChain courses
