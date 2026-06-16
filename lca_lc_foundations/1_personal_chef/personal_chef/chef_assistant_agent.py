@@ -6,7 +6,7 @@ from langchain.agents import create_agent
 from langchain.messages import HumanMessage
 from langgraph.checkpoint.memory import InMemorySaver
 
-import agent_tools as tools
+import personal_chef.agent_tools as tools
 
 
 class ChefAssistantAgent:

@@ -1,16 +1,16 @@
 # Personal chef assistant agent
 
-from dotenv import load_dotenv
+from pathlib import Path
 
+from dotenv import load_dotenv
 from langchain.messages import HumanMessage
 
-load_dotenv()
-
-from chef_assistant_agent import (
+from personal_chef.chef_assistant_agent import (
     ChefAssistantAgentTextBased,
     ChefAssistantAgentImageBased,
 )
 
+load_dotenv()
 
 chef_assistant_agent = ChefAssistantAgentTextBased()
 chef_assistant_agent.send_message(
@@ -23,7 +23,14 @@ chef_assistant_agent.send_message(
 print("\n\n=============\n\n")
 
 chef_assistant_agent_images = ChefAssistantAgentImageBased()
-chef_assistant_agent_images.send_image(image_path="assets/pantry.jpg")
+
+
+def get_image_path():
+    base_path = Path(__file__).parent
+    return base_path / "assets" / "pantry.jpg"
+
+
+chef_assistant_agent_images.send_image(image_path=get_image_path())
 chef_assistant_agent_images.send_message(
     HumanMessage(content="I actually also have eggs. Could I make a frittata?")
 )
