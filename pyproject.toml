@@ -40,5 +40,6 @@ build-backend = "setuptools.build_meta"
 [tool.uv.workspace]
 members = [
     "lca_lc_foundations/1_personal_chef",
-    "lca_lc_foundations/2_wedding_planner"
+    "lca_lc_foundations/2_wedding_planner",
+    "lca_lc_foundations/3_email_agent"
 ]
